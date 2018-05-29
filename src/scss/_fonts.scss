@@ -1,15 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900');
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700');
 * {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .text-bold {
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .text-thin {
   font-weight: lighter;
+}
+
+.text-italic {
+  font-style: italic
+}
+
+a {
+  color: $color-primary;
 }
 
 small {
@@ -24,6 +31,31 @@ medium {
 }
 big {
   color: $gray-dark;
-  font-size: 27px;
+  font-size: 23px;
   display: block;
+}
+.text-center {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.text-gray {
+  color: $gray;
+}
+.text-white {
+  color: $white;
+}
+.color-facebook { 
+  color: $color-facebook
+}
+.color-twitter {
+  color: $color-twitter
+}
+.color-instagram {
+  color: $color-instagram
+}
+
+.color-mail {
+  color: $color-mail
 }

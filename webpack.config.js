@@ -11,8 +11,8 @@ const SRC = path.resolve(__dirname, 'src');
 var config = {
   cache: true,
   context: path.join(__dirname, "src"),
-  devtool: 'source-map',
-  // devtool: debug ? "inline-sourcemap" : false,
+  // devtool: 'source-map',
+  devtool: debug ? "inline-sourcemap" : false,
   entry: APP_DIR + '/index.jsx',
   watch: true,
   output: {
@@ -50,6 +50,7 @@ var config = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
+        exclude: /node_modules/,
         query: {
             presets: ['es2015', 'stage-3']
         }
@@ -65,13 +66,14 @@ var config = {
     historyApiFallback: true,
     watchOptions: {
       ignored: /node_modules/
+      
     },
     contentBase: "src",
     hot: true,
     proxy: {
       '/api': {
       changeOrigin: true,
-      target: 'http://localhost:3000',
+      target: 'http://localhost:3002',
       secure: false}
     }
     // proxy: {

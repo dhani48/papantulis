@@ -3,15 +3,24 @@
 // @import 'bootstrap';
 @import 'utilities';
 @import 'cards';
+@import 'buttons';
 @import 'components';
 @import 'placeholders';
 
+//Pages
+@import 'place-detail';
 
+//CMS
+@import 'cms/cms-main';
 
-
+//Font-awesome
+@import 'font_awesome/font-awesome';
 
 body {
     margin:0;
-    background-color:$gray;
+    background-color:$gray-light;
+}
+[data-reactroot],body, html, #app {
+    height: 100% !important; 
 }
 

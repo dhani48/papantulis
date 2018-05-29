@@ -7,28 +7,35 @@ export const Small = ({text, classname}) => {
         :
         <div className={`${ classname }`}>
             <div className="ph-small loading-line" style={{ width:'75%' }}></div>
-            <div className="ph-small loading-line" style={{ width:'75%' }}></div>
-            <div className="ph-small loading-line" style={{ width:'55%' }}></div>
-            <div className="ph-small loading-line" style={{ width:'45%' }}></div>
-            
         </div>
     )
 }
 
 export const Medium = ({text, classname}) => (
-    text ?
-    <medium className={`${ classname }`}>{text}</medium> 
-    :
-    <div className={`${ classname }`}>
-        <div className="ph-medium loading-line" style={{ width:'70%' }}></div>
-        <div className="ph-medium loading-line" style={{ width:'55%' }}></div>
-    </div>
+        Array.isArray(text) ?
+            <div>
+                {
+                    text.map((v,k)=> {
+                        return(
+                            <medium className={`${ classname }`}>{v}</medium> 
+                        )
+                    })
+                }
+            </div>
+        : 
+        text !=null ?
+            <medium className={`${ classname }`}>{text}</medium> 
+        :
+        <div className={`${ classname }`}>
+            <div className="ph-medium loading-line" style={{ width:'70%' }}></div>
+            <div className="ph-medium loading-line" style={{ width:'55%' }}></div>
+        </div>
     
 )
 
 export const Big = ({text, classname}) => (
-    text ? 
+    text != null ? 
     <big className={`${ classname }`}>{text}</big> 
     :
-    <div className={`ph-big loading-line ${ classname }`}></div>
+    <div className={`ph-big loading-line ${ classname }`} style={{ width:'70%' }}></div>
 )
