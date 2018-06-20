@@ -73,7 +73,7 @@ var config = {
     proxy: {
       '/api': {
       changeOrigin: true,
-      target: 'http://localhost:3002',
+      target: 'http://localhost:3001',
       secure: false}
     }
     // proxy: {

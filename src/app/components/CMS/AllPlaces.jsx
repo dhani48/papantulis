@@ -68,7 +68,7 @@ class AllPlaces extends Component {
                     <div className="btn-group">
                       <button className="btn-small btn-primary fa fa-edit"></button>
                       <button className="btn-small btn-red fa fa-trash" onClick={()=> {
-                        this.deletePlace(v.place_idtest)
+                        this.deletePlace(v.place_id)
                       }}></button>
                     </div>
                     

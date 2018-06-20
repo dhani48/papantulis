@@ -41,7 +41,7 @@ router.post('/add-place', upload.fields([]), function(req, res, next) {
 
   router.post('/delete-place',upload.fields([]), function(req, res, next) {
     var place_id = req.body.id
-    console.log(place_id)
+    console.log(req.body)
     // GET/users/ route
     DB.query(`DELETE place_adresses, place_detail
       FROM place_detail
